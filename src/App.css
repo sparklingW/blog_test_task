@@ -1,38 +1,111 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
+  outline: none;
+  max-width: 100px;
+  border-radius: 3px;
+  height: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
+.post_element {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 10px 20px;
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: 2rem;
+}
+.body {
+  margin: 10px 0;
+}
+.single_post {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 99.8vh;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.single_post_title {
+  font-size: 3rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.single_post_body {
+  font-size: 1.4rem;
 }
+.comments_section {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.single_comment {
+  border-bottom: 2px solid palevioletred;
+  margin: 10px 0;
+  padding: 5px;
+}
+.left_comment {
+  display: flex;
+  align-items: center;
+}
+input {
+  outline: none;
+  font-size: 1.1rem;
+  padding: 4px;
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  width: 100px;
+  border-radius: 3px;
+  height: 33px;
+  margin: 0 10px;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
 
-@keyframes App-logo-spin {
-  from {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #cef;
+  border-color: #cef transparent #cef transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
